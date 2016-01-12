@@ -8,17 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cn.aft.framework.listener.OnOnceClickListener;
 import cn.aft.tools.TipToast;
 
 /**
  * 2016年1月1日 by congtaowang
- *
+ * <p/>
  * Version 1.0
  */
 public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresenter<V>> extends Fragment implements
         BaseView {
 
     protected P _presenter;
+    private View contentView;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -41,6 +43,7 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        contentView = view;
         super.onViewCreated(view, savedInstanceState);
     }
 
@@ -66,6 +69,31 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
 
     @Override
     public void dismissProgressDialog() {
+
+    }
+
+    /**
+     * Invoke in #onViewCreated or after it.
+     *
+     * @param id view id int layout file
+     */
+    protected void attachViewWithClickListener(int id) {
+        if (contentView != null) {
+            View view = contentView.findViewById(id);
+            if (view != null) {
+                view.setOnClickListener(clickListener);
+            }
+        }
+    }
+
+    private OnOnceClickListener clickListener = new OnOnceClickListener() {
+        @Override
+        public void onOnceClick(View v) {
+            onViewClicked(v);
+        }
+    };
+
+    protected void onViewClicked(View view) {
 
     }
 
