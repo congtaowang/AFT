@@ -1,4 +1,4 @@
 /**
- * ${DATE} by ${USER}.<br/>
+ * ${DATE} by ${USER}.
  * Version 1.0
  */
