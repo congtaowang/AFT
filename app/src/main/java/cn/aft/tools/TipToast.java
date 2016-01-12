@@ -10,10 +10,13 @@ import android.content.Context;
 import android.os.Handler;
 import android.widget.Toast;
 
+/**
+ * Init TipToast in your Application
+ */
 public final class TipToast {
 
     private static Toast toast = null;
-    private static Object sysnObject = new Object();
+    private static final Object sysnObject = new Object();
     private static Handler handler = null;
     private static Context context;
 
