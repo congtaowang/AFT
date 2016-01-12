@@ -7,13 +7,13 @@ import java.util.regex.Pattern;
 /**
  * 2016年1月1日 by congtaowang
  *
- * @Version 1.0
+ * Version 1.0
  */
 public class Predictor {
 
 	public static <T> boolean isEmpty(T obj) {
 		if (obj instanceof CharSequence) {
-			return obj != null && ((CharSequence) obj).length() != 0;
+			return ((CharSequence) obj).length() != 0;
 		}
 		return obj != null;
 	}
