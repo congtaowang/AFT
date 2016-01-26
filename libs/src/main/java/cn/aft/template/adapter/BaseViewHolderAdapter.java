@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.aft.tools.Data;
 import cn.aft.tools.Predictor;
 
 /**
@@ -25,7 +26,7 @@ public abstract class BaseViewHolderAdapter<T> extends BaseAdapter {
     @Override
 
     public int getCount() {
-        return Predictor.isEmpty(mDatas) ? 0 : mDatas.size();
+        return Data.getSize(mDatas);
     }
 
     @Override
@@ -77,7 +78,7 @@ public abstract class BaseViewHolderAdapter<T> extends BaseAdapter {
         if (Predictor.isEmpty(mDatas)) {
             mDatas = new ArrayList<>();
         }
-        if (appendDatas != null) {
+        if (Predictor.isNotEmpty(appendDatas)) {
             mDatas.addAll(appendDatas);
         }
         notifyDataSetChanged();

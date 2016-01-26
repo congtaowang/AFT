@@ -1,4 +1,4 @@
-package cn.aft.view;
+package cn.aft.sample.view;
 
 import cn.aft.framework.mvp.BaseView;
 

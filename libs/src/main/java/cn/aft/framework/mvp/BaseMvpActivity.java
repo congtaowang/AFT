@@ -72,7 +72,12 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
 
     }
 
-    protected void attachViewWithClickListener(int id) {
+    /**
+     * Invoke the method after you have implemented method {@link BaseMvpActivity#onViewClicked(View,int)}
+     *
+     * @param id
+     */
+    protected void attachClickListener(int id) {
         View view = findViewById(id);
         if (view != null) {
             view.setOnClickListener(clickListener);
@@ -82,11 +87,17 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
     private OnOnceClickListener clickListener = new OnOnceClickListener() {
         @Override
         public void onOnceClick(View v) {
-            onViewClicked(v);
+            onViewClicked(v, v.getId());
         }
     };
 
-    protected void onViewClicked(View view) {
+    /**
+     * Clicked views' implementation
+     *
+     * @param view
+     * @param id
+     */
+    protected void onViewClicked(View view, int id) {
 
     }
 

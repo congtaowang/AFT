@@ -13,7 +13,7 @@ import cn.aft.tools.TipToast;
 
 /**
  * 2016年1月1日 by congtaowang
- * <p/>
+ * <p>
  * Version 1.0
  */
 public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresenter<V>> extends Fragment implements
@@ -73,11 +73,11 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     }
 
     /**
-     * Invoke in #onViewCreated or after it.
+     * Invoke the method after you have implemented method {@link BaseMvpFragment#onViewClicked(View, int)}
      *
-     * @param id view id int layout file
+     * @param id
      */
-    protected void attachViewWithClickListener(int id) {
+    protected void attachClickListener(int id) {
         if (contentView != null) {
             View view = contentView.findViewById(id);
             if (view != null) {
@@ -89,11 +89,17 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     private OnOnceClickListener clickListener = new OnOnceClickListener() {
         @Override
         public void onOnceClick(View v) {
-            onViewClicked(v);
+            onViewClicked(v, v.getId());
         }
     };
 
-    protected void onViewClicked(View view) {
+    /**
+     * Clicked views' implementation
+     *
+     * @param view
+     * @param id
+     */
+    protected void onViewClicked(View view, int id) {
 
     }
 
