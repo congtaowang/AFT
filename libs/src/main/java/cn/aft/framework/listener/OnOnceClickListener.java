@@ -11,13 +11,12 @@ import android.view.View.OnClickListener;
 public abstract class OnOnceClickListener implements OnClickListener {
 
     private long lastClickTime = 0L;
-    private long currentClickTime = 0L;
 
     private final int MIN_CLICK_DELAY_TIME = 500;// ms
 
     @Override
     public void onClick(View v) {
-        currentClickTime = System.currentTimeMillis();
+        long currentClickTime = System.currentTimeMillis();
         if (currentClickTime - lastClickTime > MIN_CLICK_DELAY_TIME) {
             onOnceClick(v);
         }

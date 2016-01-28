@@ -20,4 +20,8 @@ public class Data {
     public static <T> int getSize(T[] arr) {
         return Predictor.isEmpty(arr) ? 0 : arr.length;
     }
+
+    public static <T extends CharSequence> int getLength(T cs) {
+        return Predictor.isNull(cs) ? 0 : cs.length();
+    }
 }

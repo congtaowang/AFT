@@ -12,7 +12,6 @@ import java.util.regex.Pattern;
  */
 public class Predictor {
 
-    //TODO Object prediction
     public static <T> boolean isNull(T obj) {
         return obj == null;
     }
@@ -56,7 +55,6 @@ public class Predictor {
         return !isEmpty(arr);
     }
 
-    //TODO Data prediction
     private static Pattern mpnPattern = Pattern.compile("^((1[3|5|8][0-9])|(14[5|7])|(17[0|[6-8]]))\\d{8}$");
 
     public static boolean isMobilePhoneNumber(String number) {

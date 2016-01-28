@@ -25,7 +25,7 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
         super.onCreate(savedInstanceState);
         _presenter = createPresenterInstance();
         if (_presenter != null) {
-            _presenter.attechView((V) this);
+            _presenter.attachView((V) this);
         }
         setContentView(getLayoutId());
         onViewCreated();
@@ -104,7 +104,7 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
     @Override
     protected void onDestroy() {
         if (_presenter != null) {
-            _presenter.dettachView();
+            _presenter.detachView();
         }
         super.onDestroy();
     }

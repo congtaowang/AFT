@@ -2,18 +2,19 @@ package cn.aft.framework.mvp;
 
 import java.lang.ref.SoftReference;
 
+import cn.aft.tools.Logger;
 import cn.aft.tools.Predictor;
 
 /**
  * 2016年1月1日 by congtaowang
- * <p>
+ * <p/>
  * Version 1.0
  */
 public abstract class BasePresenter<V extends BaseView> {
 
     private SoftReference<V> mViewRef;
 
-    protected void attechView(V view) {
+    protected void attachView(V view) {
         if (Predictor.isNull(view)) {
             throw new NullPointerException("BasePresenter#attechView view can not be null");
         }
@@ -28,8 +29,9 @@ public abstract class BasePresenter<V extends BaseView> {
         return mViewRef.get();
     }
 
-    protected void dettachView() {
+    protected void detachView() {
         if (isViewAttached()) {
+            Logger.d(getView().getClass().getName() + " dettach from window");
             mViewRef.clear();
             mViewRef = null;
         }
