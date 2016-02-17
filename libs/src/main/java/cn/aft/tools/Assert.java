@@ -6,9 +6,11 @@ package cn.aft.tools;
  */
 public final class Assert {
 
-    public static <T> void notNull(T obj) {
-        if (Predictor.isNull(obj)) {
-            throw new NullPointerException("Null object");
+    public static void notNull(Object... objects) {
+        for (Object obj : objects) {
+            if (Predictor.isNull(obj)) {
+                throw new NullPointerException("Null object");
+            }
         }
     }
 }
