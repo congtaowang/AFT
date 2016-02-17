@@ -24,4 +24,12 @@ public class Data {
     public static <T extends CharSequence> int getLength(T cs) {
         return Predictor.isNull(cs) ? 0 : cs.length();
     }
+
+    public static int intValue(String strOfInt) {
+        try {
+            return Integer.valueOf(strOfInt);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
 }
