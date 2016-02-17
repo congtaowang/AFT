@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
 import cn.aft.framework.listener.OnOnceClickListener;
 import cn.aft.tools.TipToast;
 
@@ -28,7 +29,7 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
         super.onCreate(savedInstanceState);
         _presenter = createPresenterInstance();
         if (_presenter != null) {
-            _presenter.attechView((V) this);
+            _presenter.attachView((V) this);
         }
     }
 
@@ -43,6 +44,7 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        ButterKnife.bind(this, view);
         contentView = view;
         super.onViewCreated(view, savedInstanceState);
     }
@@ -75,7 +77,7 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     /**
      * Invoke the method after you have implemented method {@link BaseMvpFragment#onViewClicked(View, int)}
      *
-     * @param id
+     * @param id id of view
      */
     protected void attachClickListener(int id) {
         if (contentView != null) {
@@ -96,8 +98,8 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     /**
      * Clicked views' implementation
      *
-     * @param view
-     * @param id
+     * @param view which view has clicked
+     * @param id   id of view
      */
     protected void onViewClicked(View view, int id) {
 
@@ -106,7 +108,7 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     @Override
     public void onDestroy() {
         if (_presenter != null) {
-            _presenter.dettachView();
+            _presenter.detachView();
         }
         super.onDestroy();
     }

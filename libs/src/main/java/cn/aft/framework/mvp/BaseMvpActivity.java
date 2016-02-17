@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
+import butterknife.ButterKnife;
 import cn.aft.framework.listener.OnOnceClickListener;
 import cn.aft.tools.TipToast;
 
@@ -28,6 +29,7 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
             _presenter.attachView((V) this);
         }
         setContentView(getLayoutId());
+        ButterKnife.bind(this);
         onViewCreated();
     }
 
@@ -73,9 +75,9 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
     }
 
     /**
-     * Invoke the method after you have implemented method {@link BaseMvpActivity#onViewClicked(View,int)}
+     * Invoke the method after you have implemented method {@link BaseMvpActivity#onViewClicked(View, int)}
      *
-     * @param id
+     * @param id id of View
      */
     protected void attachClickListener(int id) {
         View view = findViewById(id);
@@ -94,8 +96,8 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
     /**
      * Clicked views' implementation
      *
-     * @param view
-     * @param id
+     * @param view which view has clicked
+     * @param id   id of View
      */
     protected void onViewClicked(View view, int id) {
 
