@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">AFT</string>
+    <string-array name="picUrls">
+        <item>http://g.hiphotos.baidu.com/image/pic/item/4a36acaf2edda3ccd2994a5402e93901213f9241.jpg</item>
+        <item>http://a.hiphotos.baidu.com/image/pic/item/2fdda3cc7cd98d10b1a9fe45223fb80e7bec9041.jpg</item>
+        <item>http://e.hiphotos.baidu.com/image/pic/item/96dda144ad34598216d017e60ff431adcbef8468.jpg</item>
+        <item>http://d.hiphotos.baidu.com/image/pic/item/7c1ed21b0ef41bd5a6e81a8052da81cb39db3d0e.jpg</item>
+        <item>http://b.hiphotos.baidu.com/image/pic/item/14ce36d3d539b600ab94fdc3ea50352ac65cb768.jpg</item>
+        <item>http://d.hiphotos.baidu.com/image/pic/item/d439b6003af33a8702f7451bc45c10385343b51d.jpg</item>
+        <item>http://e.hiphotos.baidu.com/image/pic/item/9f2f070828381f30ad006caeab014c086e06f098.jpg</item>
+        <item>http://d.hiphotos.baidu.com/image/pic/item/38dbb6fd5266d016ea015321952bd40735fa359b.jpg</item>
+        <item>http://h.hiphotos.baidu.com/image/pic/item/b219ebc4b74543a97dfb32d11c178a82b80114cf.jpg</item>
+        <item>http://b.hiphotos.baidu.com/image/pic/item/562c11dfa9ec8a139a824deef503918fa0ecc020.jpg</item>
+        <item>http://e.hiphotos.baidu.com/image/pic/item/4610b912c8fcc3ce871779ec9345d688d53f201d.jpg</item>
+        <item>http://a.hiphotos.baidu.com/image/pic/item/f31fbe096b63f624eb53c9028544ebf81a4ca3a1.jpg</item>
+        <item>http://e.hiphotos.baidu.com/image/pic/item/9e3df8dcd100baa13121b4ba4510b912c8fc2ea6.jpg</item>
+        <item>http://e.hiphotos.baidu.com/image/pic/item/f7246b600c3387446f56de7d530fd9f9d72aa024.jpg</item>
+        <item>http://g.hiphotos.baidu.com/image/pic/item/d01373f082025aaf628e63c3f9edab64034f1a7d.jpg</item>
+        <item> http://a.hiphotos.baidu.com/image/pic/item/86d6277f9e2f0708f85d5918eb24b899a901f24a.jpg</item>
+        <item>http://d.hiphotos.baidu.com/image/pic/item/d058ccbf6c81800aaa274a03b33533fa838b47f9.jpg</item>
+        <item>http://h.hiphotos.baidu.com/image/pic/item/4ec2d5628535e5ddf0a6ffde74c6a7efce1b622c.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/pic/item/ac4bd11373f08202f7fce43e49fbfbedab641b40.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/pic/item/f7246b600c338744debe0974530fd9f9d72aa0ba.jpg</item>
+        <item>http://a.hiphotos.baidu.com/image/pic/item/10dfa9ec8a136327c2e17e54938fa0ec08fac74d.jpg</item>
+        <item>http://g.hiphotos.baidu.com/image/pic/item/32fa828ba61ea8d37b446b05950a304e251f5848.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/pic/item/08f790529822720e198efffb79cb0a46f21fab6a.jpg</item>
+    </string-array>
+    <string-array name="thumbUrls">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>http://g.hiphotos.baidu.com/image/w%3D310/sign=17819299cf11728b302d8a23f8fdc3b3/d01373f082025aaf628e63c3f9edab64034f1a7d.jpg</item>
+        <item>http://a.hiphotos.baidu.com/image/w%3D310/sign=0126eb63d31373f0f53f699e940f4b8b/86d6277f9e2f0708f85d5918eb24b899a901f24a.jpg</item>
+        <item>http://d.hiphotos.baidu.com/image/w%3D310/sign=0bf18dd156e736d158138a09ab514ffc/d058ccbf6c81800aaa274a03b33533fa838b47f9.jpg</item>
+        <item>http://h.hiphotos.baidu.com/image/w%3D310/sign=a1b755c23887e9504217f56d2039531b/4ec2d5628535e5ddf0a6ffde74c6a7efce1b622c.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/w%3D310/sign=558f9131b8a1cd1105b674218912c8b0/ac4bd11373f08202f7fce43e49fbfbedab641b40.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/w%3D310/sign=9c475f306c061d957d4631394bf40a5d/f7246b600c338744debe0974530fd9f9d72aa0ba.jpg</item>
+        <item>http://a.hiphotos.baidu.com/image/w%3D310/sign=e3980b71cdfc1e17fdbf8a307a90f67c/10dfa9ec8a136327c2e17e54938fa0ec08fac74d.jpg</item>
+        <item>http://g.hiphotos.baidu.com/image/w%3D310/sign=c999ff538735e5dd902ca3de46c6a7f5/32fa828ba61ea8d37b446b05950a304e251f5848.jpg</item>
+        <item>http://f.hiphotos.baidu.com/image/w%3D310/sign=a661af30a38b87d65042ad1e37092860/08f790529822720e198efffb79cb0a46f21fab6a.jpg</item>
+    </string-array>
 </resources>

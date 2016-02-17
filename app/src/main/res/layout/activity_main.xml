@@ -20,5 +20,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BaseViewHolder and BaseAdapter" />
+    <Button
+        android:id="@+id/recyclerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerImageView" />
+    <Button
+        android:id="@+id/album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Album" />
+    <Button
+        android:id="@+id/designPattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Design Pattern" />
 
 </LinearLayout>
