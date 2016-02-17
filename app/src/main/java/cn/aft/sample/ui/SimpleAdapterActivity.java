@@ -4,6 +4,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import butterknife.Bind;
 import cn.aft.framework.mvp.BaseMvpActivity;
 import cn.aft.sample.R;
 import cn.aft.sample.adapter.SimpleAdapter;
@@ -18,7 +19,8 @@ import cn.aft.sample.view.SimpleAdapterView;
 public class SimpleAdapterActivity extends BaseMvpActivity<SimpleAdapterView, SimpleAdapterPresenter> implements SimpleAdapterView {
 
 
-    private ListView list;
+    @Bind(R.id.list) ListView list;
+
     private SimpleAdapter adapter;
 
     @Override
@@ -33,8 +35,6 @@ public class SimpleAdapterActivity extends BaseMvpActivity<SimpleAdapterView, Si
 
     @Override
     protected void onViewCreated() {
-        list = ((ListView) findViewById(R.id.list));
-
         adapter = new SimpleAdapter(createSimpleData(), new SimpleClickDelegate() {
             @Override
             public void onItemClick(int position) {

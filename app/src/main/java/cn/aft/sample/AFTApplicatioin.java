@@ -10,9 +10,16 @@ import cn.aft.sample.tools.Initor;
  */
 public class AFTApplicatioin extends Application {
 
+    private static AFTApplicatioin instance;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
         Initor.init(this);
+    }
+
+    public static AFTApplicatioin getInstance() {
+        return instance;
     }
 }

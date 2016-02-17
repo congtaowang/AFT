@@ -1,12 +1,13 @@
 package cn.aft.sample.ui;
 
-import android.content.Intent;
 import android.view.View;
 
 import cn.aft.framework.mvp.BaseMvpActivity;
 import cn.aft.sample.R;
 import cn.aft.sample.presenter.MainPresenter;
+import cn.aft.sample.ui.pattern.PatternsActivity;
 import cn.aft.sample.view.MainView;
+import cn.aft.tools.LauncherManager;
 
 public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
 
@@ -24,6 +25,9 @@ public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
     protected void onViewCreated() {
         attachClickListener(R.id.toast);
         attachClickListener(R.id.baseAdapter);
+        attachClickListener(R.id.recyclerImageView);
+        attachClickListener(R.id.album);
+        attachClickListener(R.id.designPattern);
     }
 
     @Override
@@ -33,8 +37,16 @@ public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
                 showToastMsg("Toast");
                 break;
             case R.id.baseAdapter:
-                Intent intent = new Intent(getActivity(), SimpleAdapterActivity.class);
-                startActivity(intent);
+                LauncherManager.getLauncher().launch(getActivity(), SimpleAdapterActivity.class);
+                break;
+            case R.id.recyclerImageView:
+                LauncherManager.getLauncher().launch(getActivity(), SimpleFrescoImageViewsActivity.class);
+                break;
+            case R.id.album:
+                LauncherManager.getLauncher().launch(getActivity(), AlbumActivity.class);
+                break;
+            case R.id.designPattern:
+                LauncherManager.getLauncher().launch(getActivity(), PatternsActivity.class);
                 break;
         }
     }

@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cn.aft.framework.listener.OnOnceClickListener;
 import cn.aft.sample.R;
 import cn.aft.sample.adapter.delegate.SimpleClickDelegate;
@@ -18,8 +20,11 @@ public class SimpleViewHolder implements BaseViewHolder<String> {
 
     private SimpleClickDelegate delegate;
 
-    private TextView text;
-    private ImageView img;
+    @Bind(R.id.text)
+    TextView text;
+
+    @Bind(R.id.img)
+    ImageView img;
 
     public SimpleViewHolder(SimpleClickDelegate delegate) {
         this.delegate = delegate;
@@ -27,8 +32,7 @@ public class SimpleViewHolder implements BaseViewHolder<String> {
 
     @Override
     public void attachView(View itemView) {
-        text = ((TextView) itemView.findViewById(R.id.text));
-        img = ((ImageView) itemView.findViewById(R.id.img));
+        ButterKnife.bind(this, itemView);
     }
 
     @Override
@@ -37,7 +41,7 @@ public class SimpleViewHolder implements BaseViewHolder<String> {
         text.setOnClickListener(new OnOnceClickListener() {
             @Override
             public void onOnceClick(View v) {
-                if(Predictor.isNotNull(delegate)){
+                if (Predictor.isNotNull(delegate)) {
                     delegate.onItemClick(position);
                 }
             }
