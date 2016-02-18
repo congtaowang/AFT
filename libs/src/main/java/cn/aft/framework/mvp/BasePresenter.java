@@ -2,11 +2,10 @@ package cn.aft.framework.mvp;
 
 import java.lang.ref.SoftReference;
 
-import cn.aft.tools.Logger;
 import cn.aft.tools.Predictor;
 
 /**
- * 2016年1月1日 by congtaowang
+ * 2016/1/1 by congtaowang
  * <p/>
  * Version 1.0
  */
@@ -31,7 +30,6 @@ public abstract class BasePresenter<V extends BaseView> {
 
     protected void detachView() {
         if (isViewAttached()) {
-            Logger.d(getView().getClass().getName() + " dettach from window");
             mViewRef.clear();
             mViewRef = null;
         }

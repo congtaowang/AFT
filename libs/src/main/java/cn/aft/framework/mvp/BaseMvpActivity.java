@@ -11,7 +11,7 @@ import cn.aft.framework.listener.OnOnceClickListener;
 import cn.aft.tools.TipToast;
 
 /**
- * 2016年1月1日 by congtaowang
+ * 2016/1/1 by congtaowang
  * <p>
  * Version 1.0
  */

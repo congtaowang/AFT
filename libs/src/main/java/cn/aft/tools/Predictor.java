@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 2016年1月1日 by congtaowang
+ * 2016/1/1 by congtaowang
  * <p/>
  * Version 1.0
  */

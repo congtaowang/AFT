@@ -17,7 +17,7 @@ public class Logger {
     public static final int WARN = 4;
     public static final int ERROR = 5;
     public static final int NOTHING = 6;
-    public static final int LEVEL = NOTHING;
+    public static final int LEVEL = VERBOSE;
     public static final String SEPARATOR = ",";
 
     public static void v(String message) {
@@ -119,17 +119,11 @@ public class Logger {
      */
     public static String getLogInfo(StackTraceElement stackTraceElement) {
         StringBuilder logInfoStringBuilder = new StringBuilder();
-        // 获取线程名
         String threadName = Thread.currentThread().getName();
-        // 获取线程ID
         long threadID = Thread.currentThread().getId();
-        // 获取文件名.即xxx.java
         String fileName = stackTraceElement.getFileName();
-        // 获取类名.即包名+类名
         String className = stackTraceElement.getClassName();
-        // 获取方法名称
         String methodName = stackTraceElement.getMethodName();
-        // 获取生日输出行数
         int lineNumber = stackTraceElement.getLineNumber();
 
         logInfoStringBuilder.append("[ ");

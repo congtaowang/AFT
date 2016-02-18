@@ -3,7 +3,7 @@ package cn.aft.framework.mvp;
 import android.app.Activity;
 
 /**
- * 2016年1月1日 by congtaowang
+ * 2016/1/1 by congtaowang
  *
  * Version 1.0
  */

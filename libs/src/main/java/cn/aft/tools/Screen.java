@@ -11,6 +11,7 @@ import android.view.WindowManager;
  */
 
 public class Screen {
+
     private static int screenWidth;
     private static int screenHeight;
 
@@ -18,7 +19,7 @@ public class Screen {
     private static DisplayMetrics dm = null;
 
     /**
-     * 获取屏幕宽度，多线程同步
+     * Get width of phone window
      *
      * @param context
      * @return
@@ -28,7 +29,6 @@ public class Screen {
             synchronized (syncObj) {
                 if (dm == null) {
                     dm = new DisplayMetrics();
-                    System.out.println("Init dm1");
                     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                     wm.getDefaultDisplay().getMetrics(dm);
                     screenWidth = dm.widthPixels;
@@ -41,7 +41,7 @@ public class Screen {
     }
 
     /**
-     * 获取屏幕高度，多线程同步
+     * Get height of phone window
      *
      * @param context
      * @return
@@ -50,7 +50,6 @@ public class Screen {
         if (screenHeight == 0) {
             synchronized (syncObj) {
                 if (dm == null) {
-                    System.out.println("Init dm2");
                     dm = new DisplayMetrics();
                     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                     wm.getDefaultDisplay().getMetrics(dm);
@@ -64,7 +63,7 @@ public class Screen {
     }
 
     /**
-     * 将屏幕调节到正常亮度 {@link WindowManager} #alpha=1.0
+     * Set window's alpha to 1.0
      *
      * @param activity
      */
@@ -77,10 +76,10 @@ public class Screen {
     }
 
     /**
-     * 调节屏幕亮度
+     * Set window's alpha to what you want
      *
      * @param activity
-     * @param alpha    0.0~1.0 值越大，屏幕越亮
+     * @param alpha    0.0~1.0
      */
     public static void becomeDark(Activity activity, float alpha) {
         if (activity instanceof Activity) {
@@ -91,7 +90,7 @@ public class Screen {
     }
 
     /**
-     * dip转为 px
+     * exchange dip to px
      */
     public static int dip2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -99,7 +98,7 @@ public class Screen {
     }
 
     /**
-     * px 转为 dip
+     * exchange px to dip
      */
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
