@@ -12,7 +12,7 @@ public class LauncherManager {
         return launcher;
     }
 
-    public static void initLauncher(Launcher launcher) {
+    public static void setLauncher(Launcher launcher) {
         if (Predictor.isNotNull(launcher)) {
             LauncherManager.launcher = launcher;
         }
