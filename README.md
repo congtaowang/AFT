@@ -2,7 +2,6 @@ AFT
 =======================
 Android development framework and tools
 
-_____________________
 
 ##目录
 * Framework部分
@@ -18,7 +17,6 @@ Framework部分
 ==========================
 
 #开始使用
-__________________________
 ##如何扩展BaseMvpActivity
 
 ```java
