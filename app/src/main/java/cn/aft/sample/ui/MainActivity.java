@@ -2,14 +2,13 @@ package cn.aft.sample.ui;
 
 import android.view.View;
 
-import cn.aft.framework.mvp.BaseMvpActivity;
 import cn.aft.sample.R;
 import cn.aft.sample.presenter.MainPresenter;
 import cn.aft.sample.ui.pattern.PatternsActivity;
 import cn.aft.sample.view.MainView;
 import cn.aft.tools.LauncherManager;
 
-public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
+public class MainActivity extends BaseActivity<MainView, MainPresenter> implements MainView{
 
     @Override
     protected MainPresenter createPresenterInstance() {
@@ -28,6 +27,8 @@ public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
         attachClickListener(R.id.recyclerImageView);
         attachClickListener(R.id.album);
         attachClickListener(R.id.designPattern);
+        attachClickListener(R.id.cardView);
+        attachClickListener(R.id.takePhoto);
     }
 
     @Override
@@ -47,6 +48,12 @@ public class MainActivity extends BaseMvpActivity<MainView, MainPresenter> {
                 break;
             case R.id.designPattern:
                 LauncherManager.getLauncher().launch(getActivity(), PatternsActivity.class);
+                break;
+            case R.id.cardView:
+                LauncherManager.getLauncher().launch(getActivity(), CardViewActivity.class);
+                break;
+            case R.id.takePhoto:
+                LauncherManager.getLauncher().launch(getActivity(), TakePhotoActivity.class);
                 break;
         }
     }

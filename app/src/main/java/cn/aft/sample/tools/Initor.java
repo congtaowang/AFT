@@ -14,6 +14,6 @@ public class Initor {
     public static void init(AFTApplicatioin app) {
         TipToast.init(app);
         Fresco.initialize(app);
-        LauncherManager.initLauncher(new ExtLauncherImpl());
+        LauncherManager.setLauncher(new ExtLauncherImpl());
     }
 }

@@ -5,7 +5,9 @@ import java.util.List;
 
 import cn.aft.sample.AFTApplicatioin;
 import cn.aft.sample.R;
+import cn.aft.sample.bean.Card;
 import cn.aft.sample.bean.SimpleDisplayer;
+import cn.aft.tools.Data;
 
 /**
  * 16/1/28 by congtaowang.
@@ -31,5 +33,21 @@ public class BeanFactory {
             displayers.add(displayer);
         }
         return displayers;
+    }
+
+    public static List<Card> createCards() {
+        String[] urls = AFTApplicatioin.getInstance().getResources().getStringArray(R.array.picUrls);
+        int size = Data.getSize(urls);
+
+        ArrayList<Card> cards = new ArrayList<>(size);
+        for (int index = 0; index < size; index++) {
+            Card card = new Card();
+            card.setImgUrl(urls[index]);
+            card.setTitle("标题" + index);
+            card.setContent("内容" + index);
+            cards.add(card);
+        }
+
+        return cards;
     }
 }
