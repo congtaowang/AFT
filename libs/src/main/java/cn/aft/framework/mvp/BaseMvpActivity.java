@@ -12,7 +12,7 @@ import cn.aft.tools.TipToast;
 
 /**
  * 2016/1/1 by congtaowang
- * <p>
+ * <p/>
  * Version 1.0
  */
 public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresenter<V>> extends FragmentActivity
@@ -35,6 +35,8 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
 
     /**
      * Invoked before {@link #setContentView(int)}
+     *
+     * @return Presenter of activity
      */
     protected abstract P createPresenterInstance();
 

@@ -22,7 +22,7 @@ public class Screen {
      * Get width of phone window
      *
      * @param context
-     * @return
+     * @return width value
      */
     public static int getWidth(Context context) {
         if (screenWidth == 0) {
@@ -44,7 +44,7 @@ public class Screen {
      * Get height of phone window
      *
      * @param context
-     * @return
+     * @return height value
      */
     public static int getHeight(Context context) {
         if (screenHeight == 0) {
@@ -89,17 +89,11 @@ public class Screen {
         }
     }
 
-    /**
-     * exchange dip to px
-     */
     public static int dip2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }
 
-    /**
-     * exchange px to dip
-     */
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);

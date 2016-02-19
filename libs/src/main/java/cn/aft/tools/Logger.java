@@ -5,8 +5,8 @@ import android.util.Log;
 
 /**
  * 16/1/28 by congtaowang.
- * Version 1.0<br/>
- * <strong>quote: <a href="http://www.2cto.com/kf/201409/337073.html">http://www.2cto.com/kf/201409/337073.html</a></strong>
+ * Version 1.0
+ * <p><strong>quote: <a href="http://www.2cto.com/kf/201409/337073.html">http://www.2cto.com/kf/201409/337073.html</a></strong></p>
  */
 
 public class Logger {
@@ -102,11 +102,6 @@ public class Logger {
         }
     }
 
-    /**
-     * 获取默认的TAG名称.
-     * 比如在MainActivity.java中调用了日志输出.
-     * 则TAG为MainActivity
-     */
     public static String getDefaultTag(StackTraceElement stackTraceElement) {
         String fileName = stackTraceElement.getFileName();
         String stringArray[] = fileName.split("\\.");
@@ -114,9 +109,6 @@ public class Logger {
         return tag;
     }
 
-    /**
-     * 输出日志所包含的信息
-     */
     public static String getLogInfo(StackTraceElement stackTraceElement) {
         StringBuilder logInfoStringBuilder = new StringBuilder();
         String threadName = Thread.currentThread().getName();

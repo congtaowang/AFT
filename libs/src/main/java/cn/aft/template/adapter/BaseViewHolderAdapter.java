@@ -61,6 +61,7 @@ public abstract class BaseViewHolderAdapter<T> extends BaseAdapter {
     protected abstract int getItemLayoutId();
 
     /**
+     * @param position which item is building or re using
      * @return can not be null
      */
     protected abstract BaseViewHolder<T> createViewHolder(int position);

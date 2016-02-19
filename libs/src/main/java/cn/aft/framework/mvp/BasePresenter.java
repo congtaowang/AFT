@@ -6,7 +6,6 @@ import cn.aft.tools.Predictor;
 
 /**
  * 2016/1/1 by congtaowang
- * <p/>
  * Version 1.0
  */
 public abstract class BasePresenter<V extends BaseView> {

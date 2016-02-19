@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 
 /**
  * 2016/1/1 by congtaowang
- * <p/>
  * Version 1.0
  */
 public class Predictor {
