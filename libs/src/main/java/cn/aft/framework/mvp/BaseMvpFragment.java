@@ -106,6 +106,12 @@ public abstract class BaseMvpFragment<V extends BaseView, P extends BasePresente
     }
 
     @Override
+    public void onDestroyView() {
+        ButterKnife.unbind(this);
+        super.onDestroyView();
+    }
+
+    @Override
     public void onDestroy() {
         if (_presenter != null) {
             _presenter.detachView();

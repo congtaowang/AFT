@@ -110,6 +110,7 @@ public abstract class BaseMvpActivity<V extends BaseView, P extends BasePresente
         if (_presenter != null) {
             _presenter.detachView();
         }
+        ButterKnife.unbind(this);
         super.onDestroy();
     }
 
