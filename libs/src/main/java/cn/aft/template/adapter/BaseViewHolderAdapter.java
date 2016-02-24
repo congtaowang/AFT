@@ -70,12 +70,12 @@ public abstract class BaseViewHolderAdapter<T> extends BaseAdapter {
         return mDatas;
     }
 
-    protected void refresh(List<T> newDatas) {
+    public void refresh(List<T> newDatas) {
         this.mDatas = newDatas;
         notifyDataSetChanged();
     }
 
-    protected void appendRefresh(List<T> appendDatas) {
+    public void appendRefresh(List<T> appendDatas) {
         if (Predictor.isEmpty(mDatas)) {
             mDatas = new ArrayList<>();
         }
