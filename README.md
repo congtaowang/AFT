@@ -2,6 +2,9 @@ AFT
 =======================
 Android development framework and tools
 
+##Compile
+compile 'cn.aft:libs:1.0.0'
+
 
 ##目录
 * Framework部分
