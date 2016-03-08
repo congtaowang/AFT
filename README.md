@@ -3,7 +3,8 @@ AFT
 Android development framework and tools
 
 ##Compile
-compile 'cn.aft:libs:1.0.0'
+compile 'cn.aft:libs:1.0.1'
+
 
 
 ##目录
