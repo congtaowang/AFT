@@ -93,5 +93,6 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter> implemen
         }
     }
 }
+
 ```
 在activity中使用_presenter调用Presenter中的实现逻辑，在Presenter中使用getView()方法获取View接口进行界面数据展示
